@@ -1,0 +1,7 @@
+.largeButton_button{
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    color: black;
+    background: linear-gradient(to right, orange, yellow);
+}

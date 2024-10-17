@@ -1,41 +1,61 @@
+//react
 import { useState } from "react";
 
+//components
+import LargeButton from "../buttons/largeButton.jsx";
+
 const LoginForm = () => {
+  const [emailState, setEmailState] = useState("");
+  const [passwordState, setPasswordState] = useState("");
 
-    const [ emailState, setEmailState ] = useState(null);
-    const [ passwordState, setPasswordState ] = useState(null);
+  const handleEmailState = (event) => {
+    setEmailState(event.target.value);
+  };
 
-    const handleEmailState = (event) => {
-        setEmailState(event.target.value)
-    };
+  const handlePasswordState = (event) => {
+    setPasswordState(event.target.value);
+  };
 
-    const handlePasswordState = (event) => {
-        setPasswordState(event.target.value)
-    };
+  const handleSendData = (event) => {
+    try {
+      event.preventDefault();
 
-    const handleSendData = (event) => {
+      if (!emailState.includes(["@"])) {
+        throw new Error("Che esto no es un mail");
+      }
+      if (!passwordState) {
+        throw new Error("Che, llena el password");
+      }
 
-        event.preventDefault();
+      const body = {
+        email: emailState,
+        password: passwordState,
+      };
 
-        const body = {
-            email:emailState,
-            password: passwordState
-        }
+      console.log(body);
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
-        console.log(body)
+  return (
+    <form>
+      <input
+        type="text"
+        placeholder="Email"
+        value={emailState}
+        onChange={handleEmailState}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={passwordState}
+        onChange={handlePasswordState}
+      />
 
-    };
-
-    return(
-
-        <form onSubmit={handleSendData}>
-                <input type="text" placeholder="Email" value={emailState} onChange={handleEmailState} />
-                <input type="password" placeholder="Password" value={passwordState} onChange={handlePasswordState} />
-                <button type="submit"> Login </button>
-        </form>
-
-    )
-
+      <LargeButton text={"Login"} action={handleSendData} />
+    </form>
+  );
 };
 
 export default LoginForm;
