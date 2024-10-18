@@ -3,9 +3,19 @@ body{
     padding: 0;
 }
 
-.container{
+/*.container{
 
     background: linear-gradient(to bottom, yellow, white);
     
 
-};
+};*/
+.container {
+    background-image: url('/images/IMG-20241017-WA0027.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+

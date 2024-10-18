@@ -39,7 +39,9 @@ const LoginForm = () => {
   };
 
   return (
-    <form>
+    <div class = "login">
+       <form>
+      <h1>LOG IN</h1>
       <input
         type="text"
         placeholder="Email"
@@ -53,8 +55,11 @@ const LoginForm = () => {
         onChange={handlePasswordState}
       />
 
-      <LargeButton text={"Login"} action={handleSendData} />
+      <LargeButton text={"Submit"} action={handleSendData} />
     </form>
+
+    </div>
+   
   );
 };
 
