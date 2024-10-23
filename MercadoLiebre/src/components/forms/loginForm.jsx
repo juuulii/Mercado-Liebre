@@ -39,7 +39,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div class = "login">
+    <div className = "login">
        <form>
       <h1>LOG IN</h1>
       <input

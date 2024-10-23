@@ -6,7 +6,6 @@
     color: white;
     /*le falta alguna img de fondo*/
     border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -16,7 +15,7 @@
 .largeButton_button{
     margin: 10px 0px;
     color: rgb(0, 0, 0);
-    background: linear-gradient(to right, orange, yellow);
+    background-color: #F5BB00;
     height: 40px;
     line-height: 40px;
     border-radius: 40px;
