@@ -2,11 +2,10 @@
 import { createRoot } from 'react-dom/client';
 
 //components
-import App from "./app.jsx";
+import App from "./App.jsx";
 
 //styles
 import "./styles/main.css"
-import { StrictMode } from 'react';
 
 //root element
 const root = document.getElementById('root')
