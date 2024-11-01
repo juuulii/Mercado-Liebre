@@ -1,8 +1,10 @@
 //react
 import { useState } from "react";
+import { Row } from "react-bootstrap";
 
 //components
 import LargeButton from "../buttons/largeButton.jsx";
+import ToggleTheme from "../buttons/ToggleButton.jsx";
 
 const LoginForm = () => {
   const [emailState, setEmailState] = useState("");
@@ -39,27 +41,28 @@ const LoginForm = () => {
   };
 
   return (
-    <div className = "login">
-       <form>
-      <h1>LOG IN</h1>
-      <input
-        type="text"
-        placeholder="Email"
-        value={emailState}
-        onChange={handleEmailState}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={passwordState}
-        onChange={handlePasswordState}
-      />
+    <div className="login">
+      <form>
+        <Row>
+          <ToggleTheme />
+        </Row>
+        <h1>LOG IN</h1>
+        <input
+          type="text"
+          placeholder="Email"
+          value={emailState}
+          onChange={handleEmailState}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={passwordState}
+          onChange={handlePasswordState}
+        />
 
-      <LargeButton text={"Submit"} action={handleSendData} />
-    </form>
-
+        <LargeButton text={"Submit"} action={handleSendData} />
+      </form>
     </div>
-   
   );
 };
 

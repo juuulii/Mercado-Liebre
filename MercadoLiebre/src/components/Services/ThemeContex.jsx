@@ -11,7 +11,7 @@ export const ThemeContextProvider = ({ children }) => {
     document.documentElement.setAttribute("data-bs-theme", themeValue);
   }, []);
 
-  const handleToLogTheme = (newTheme) => {
+  const handleToggleTheme = (newTheme) => {
     if (newTheme === "DARK") {
       document.documentElement.setAttribute("data-bs-theme", "dark");
       localStorage.setItem("theme", newTheme);
@@ -27,7 +27,7 @@ export const ThemeContextProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, handleToLogTheme }}>
+    <ThemeContext.Provider value={{ theme, handleToggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

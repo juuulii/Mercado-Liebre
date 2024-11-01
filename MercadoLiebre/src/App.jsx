@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/login.jsx";
 import DashboardPage from "./pages/dahsboard.jsx";
 import AdminPage from "./pages/admin.jsx";
-import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
+// import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
+import { ThemeContextProvider } from "./components/Services/ThemeContex.jsx";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,9 +31,9 @@ const App = () => {
   ]);
   return (
     <div className="container">
-      <AuthContextProvider>
+      <ThemeContextProvider>
         <RouterProvider router={router} />
-      </AuthContextProvider>
+      </ThemeContextProvider>
     </div>
   );
 };

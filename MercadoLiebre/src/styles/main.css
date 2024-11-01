@@ -1,6 +1,6 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*.container{
@@ -10,12 +10,12 @@ body{
 
 };*/
 .container {
-    background-image: url('/images/Picsart_24-10-22_20-49-14-128.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+  background-image: url("/images/Picsart_24-10-22_20-49-14-128.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
