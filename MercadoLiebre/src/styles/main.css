@@ -3,19 +3,4 @@ body {
   padding: 0;
 }
 
-/*.container{
 
-    background: linear-gradient(to bottom, yellow, white);
-    
-
-};*/
-.container {
-  background-image: url("/images/Picsart_24-10-22_20-49-14-128.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
