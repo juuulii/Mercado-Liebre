@@ -5,7 +5,7 @@ const NotFound = () => {
     const navigate = useNavigate();
 
     const goBackLoginHandler = () => {
-        navigate("/login");
+        navigate("/");
     };
     return (
         <div className="text-center mt-3">

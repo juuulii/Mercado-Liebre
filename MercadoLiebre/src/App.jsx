@@ -8,6 +8,8 @@ import AdminPage from "./pages/admin.jsx";
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
 import { ThemeContextProvider } from "./components/Services/ThemeContex.jsx";
 
+import NotFound from "./components/notFound/NotFound";
+
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -28,6 +30,9 @@ const App = () => {
             path:"/dashboard"
         },
         */
+    {
+      path: "*", element: <NotFound />
+    }
   ]);
   return (
     <div className="container">
