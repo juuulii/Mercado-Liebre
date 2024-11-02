@@ -1,8 +1,15 @@
+import env from "../utils/enviroment.js"
+
 const Products = {
 
-    getAll:async()=> {
+    getProducts:async(id)=> {
 
-        const url = "https://fakestoreapi.com/products";
+        let url;
+
+        id 
+        ? url = `${env.backUrl}/products/${id}` 
+        : url = `${env.backUrl}/products`
+
         const options = {
             method:"GET"
         }
@@ -20,10 +27,6 @@ const Products = {
         return response;
 
     },
-    getOne:async() => {
-
-    }
-
 };
 
 export default Products;

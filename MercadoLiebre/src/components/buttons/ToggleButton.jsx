@@ -7,7 +7,7 @@ const ToggleTheme = () => {
 
   return (
     <Button
-      onClick={() => handleToggleTheme(theme === "LIGHT" ? "DARK" : "Light")}
+      onClick={() => handleToggleTheme(theme === "LIGHT" ? "DARK" : "LIGHT")}
       className="my-3"
     >
       {theme === "LIGHT" ? "cambiar a claro" : "cambiar a oscuro"}

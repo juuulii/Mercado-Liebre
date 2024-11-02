@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/login.jsx";
 import DashboardPage from "./pages/dahsboard.jsx";
 import AdminPage from "./pages/admin.jsx";
+import ProductPage from "./pages/product.jsx"
+
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
 import { ThemeContextProvider } from "./components/Services/ThemeContex.jsx";
 
@@ -23,6 +25,10 @@ const App = () => {
     {
       element: <AdminPage />, //admin
       path: "/admin",
+    },
+    {
+      element: <ProductPage />,
+      path:"/product"
     },
     /*
         {

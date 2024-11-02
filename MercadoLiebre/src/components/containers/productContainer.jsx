@@ -1,7 +1,19 @@
+import env from "../../utils/enviroment";
+
 const ProductContainer = ({product}) => {
 
+    const setProductOnLS = () => {
+
+        window.localStorage.setItem("product",product.id);
+        console.log(`Producto con Id: ${product.id} guardado`);
+
+        window.location.href = `${env.frontUrl}/product`
+
+    }
+
     return(
-        <div>
+
+        <div onClick={setProductOnLS}>
 
             <img src={product.image} alt={product.title} />
 

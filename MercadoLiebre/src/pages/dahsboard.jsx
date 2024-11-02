@@ -16,7 +16,7 @@ const DashboardPage = () => {
 
     const getProducts = async() => {
 
-        const products = await Products.getAll();
+        const products = await Products.getProducts();
 
         console.log(products)
 

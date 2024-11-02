@@ -8,9 +8,7 @@ const AdminPage = () => {
         <div>
 
             <DashboardHeader></DashboardHeader>
-
             <AddProductForm></AddProductForm>
-            
             
         </div>
     )
