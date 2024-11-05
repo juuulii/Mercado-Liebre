@@ -29,6 +29,7 @@ export const ThemeContextProvider = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ theme, handleToggleTheme }}>
       {children}
+      <div id="" className="" data-bs-theme="dark"></div>
     </ThemeContext.Provider>
   );
 };

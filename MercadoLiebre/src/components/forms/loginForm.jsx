@@ -43,9 +43,6 @@ const LoginForm = () => {
   return (
     <div className="login">
       <form>
-        <Row>
-          <ToggleTheme />
-        </Row>
         <h1>LOG IN</h1>
         <input
           type="text"
