@@ -25,8 +25,6 @@ const ProductPage = () => {
             //obtener el id desde el localstorage
             const idProduct = window.localStorage.getItem("product")
 
-            console.log(idProduct)
-
             if(!idProduct){
                 window.location.href = `${env.frontUrl}/dashboard`
             }

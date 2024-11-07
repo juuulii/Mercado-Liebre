@@ -22,9 +22,8 @@ const DashboardHeader = () => {
         <header className={themeState === "dark" ? "header-dark" : "header-light"}>
             <img src="" alt="" />
             <nav>
-                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Crea Tu Cuenta</a>
-                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Ingresa</a>
-                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Todos Los Productos</a>
+                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="/dashboard">Ver Productos</a>
+                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="/admin">Gestionar Productos</a>
                 <button onClick={changeTheme}>Cambiar Tema</button>
             </nav>
         </header>

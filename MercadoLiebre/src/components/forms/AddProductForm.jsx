@@ -32,6 +32,7 @@ const AddProductForm = () => {
     }
 
     return (
+        
         <form onSubmit={handleSubmit} >
             <input type="text" placeholder="Title" value={formState.title} onChange={ (event)=>{ handleChangeForm(event, formState, setFormState,"title") } } />
             <input type="text" placeholder="Description" value={formState.description} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "description") }} />

@@ -7,7 +7,7 @@ import DashboardPage from "./pages/dahsboard.jsx";
 import AdminPage from "./pages/admin.jsx";
 import ProductPage from "./pages/product.jsx";
 import About from "./pages/about.jsx";
-import SysAdmin from "./pages/sysAdmin.jsx"
+import UpdateProductPage from "./pages/updateProduct.jsx"
 
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
 import {ThemeProvider}  from "./hooks/theme.ctx.jsx"
@@ -30,8 +30,8 @@ const App = () => {
       path: "/admin",
     },
     {
-      element: <SysAdmin />,
-      path: "/sysAdmin",
+      element: <UpdateProductPage />,
+      path: "/updateProduct",
     },
     {
       element: <ProductPage />,

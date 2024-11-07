@@ -7,11 +7,7 @@ const Products = {
         let url;
         const token = window.localStorage.getItem("jwt");
 
-        id 
-        ? url = `${env.backUrl}/api/Item/${id}` 
-        : url = `${env.backUrl}/api/Item`
-
-        console.log(url)
+        url = `${env.backUrl}/api/Item`
 
         const options = {
             method:"GET",
@@ -27,10 +23,28 @@ const Products = {
             return false;
         }
 
-        const response = request.json();
+        const response = await request.json();
 
-        console.log("Request Successfull");
-        return response;
+        if(id){
+
+            const product = response.find( element => element.id == id );
+
+            if(!product){
+                throw new Error(`Product ${id} Not Found`);
+            }
+
+            console.log(`Request Successfull: product: ${id}`);
+
+            return product;
+
+        }else{
+
+            console.log("Request Successfull: all products");
+            return response;
+
+        }
+
+
 
     },
 
@@ -87,9 +101,38 @@ const Products = {
         }else{
             return false;
         }
+    },
+
+    update: async(body) => {
+
+        const token = window.localStorage.getItem("jwt");
+        const idProduct = window.localStorage.getItem("product");
+
+        console.log(body)
+
+        //url de la api
+        let url = `${env.backUrl}/api/Item/${idProduct}`;
+
+        //opciones de configuracion de la peticion
+        let options = {
+            method:"PUT",
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":`Bearer ${token}`
+            },
+            body: JSON.stringify(body)
+        };
+
+        //hacer la peticion
+        const request = await fetch(url, options);
+
+        if(request.ok){
+            return true
+        }else{
+            return false
+        }
+        
     }
-
-
 };
 
 export default Products;

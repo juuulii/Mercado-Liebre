@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 //api
 import Products from "../api/products.api.js"
+import env from "../utils/enviroment.js";
 
 const AdminPage = () => {
 
@@ -40,6 +41,12 @@ const AdminPage = () => {
 
     }
 
+    const redirectToUpdate = (id) => {
+
+        window.localStorage.setItem("product", id);
+        window.location.href = `${env.frontUrl}/updateProduct`
+    }
+
     return(
 
         <div className="admin-container-products">
@@ -53,7 +60,9 @@ const AdminPage = () => {
                         return <div key={index}> 
                         <img style={{"width":"50px", "height":"50px", "margin":"10px"}} src={element.imageURL} alt="" />
                         {element.title} - {element.price} 
-                        <button style={{"margin":"20px"}} onClick={()=>{ deleteProduct(element.id) }}> Eliminar </button> </div>
+                        <button style={{"margin":"20px"}} onClick={()=>{ deleteProduct(element.id) }}> Eliminar </button> 
+                        <button onClick={()=>{ redirectToUpdate(element.id) }}> Actualizar </button>
+                        </div>
                     })
                 }
             
