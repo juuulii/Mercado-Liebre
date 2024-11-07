@@ -1,10 +1,14 @@
 //react
 import { useState } from "react";
-import { Row } from "react-bootstrap";
 
 //components
 import LargeButton from "../buttons/largeButton.jsx";
-import ToggleTheme from "../buttons/ToggleButton.jsx";
+
+//api
+import Auth from "../../api/auth.js"
+
+//utils
+import env from "../../utils/enviroment.js";
 
 const LoginForm = () => {
   const [emailState, setEmailState] = useState("");
@@ -13,13 +17,13 @@ const LoginForm = () => {
   const handleEmailState = (event) => {
     setEmailState(event.target.value);
   };
-
   const handlePasswordState = (event) => {
     setPasswordState(event.target.value);
   };
 
-  const handleSendData = (event) => {
+  const handleSendData = async(event) => {
     try {
+
       event.preventDefault();
 
       if (!emailState.includes(["@"])) {
@@ -34,7 +38,12 @@ const LoginForm = () => {
         password: passwordState,
       };
 
-      console.log(body);
+      const token = await Auth.login(body);
+
+      window.localStorage.setItem("jwt", token);
+
+      window.location.href = `${env.frontUrl}/dashboard`
+
     } catch (error) {
       alert(error.message);
     }

@@ -1,7 +1,7 @@
 const env = {
 
     frontUrl:"http://localhost:5173",
-    backUrl:"https://fakestoreapi.com"
+    backUrl:"http://localhost:5268"
 
 };
 

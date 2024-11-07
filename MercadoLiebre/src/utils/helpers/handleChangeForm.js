@@ -15,8 +15,8 @@ const handleChangeForm = (event,formState ,setFormState ,key) => {
         case "category":
             setFormState({...formState, category: event.target.value})
             break;
-        case "image":
-            setFormState({...formState, image: event.target.value})
+        case "imageURL":
+            setFormState({...formState, imageURL: event.target.value})
             break;        
     
         default:

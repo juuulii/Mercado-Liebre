@@ -1,3 +1,4 @@
+//components
 import DashboardHeader from "../components/headers/dashboardHeader";
 import Footer from "../components/footers/footer";
 import UserForm from "../components/forms/userForm";

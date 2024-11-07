@@ -1,65 +1,34 @@
 import "../../styles/components/headers/dashboardHeader.css";
 
-//react
-import { useContext, useState } from "react";
-
-//context
-import { ThemeContext } from "../../hooks/theme.ctx"
-import { useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
+import { ThemeContext } from "../../hooks/theme.ctx";
 
 const DashboardHeader = () => {
-
     const { themeState, setThemeState } = useContext(ThemeContext);
 
-    const classList = {
-        dark:{
-            nav:"nav-dark",
-            a:"a-dark"
-        },
-        light:{
-            nav:"nav-light",
-            a:"a-light"
-        }
-    }
-
-    const { styleState, setStyleState } = useState(classList.light)
-
-    useEffect(()=>{
-
+    useEffect(() => {
         const theme = window.localStorage.getItem("theme") ?? "light";
         setThemeState(theme);
-
-    },[])
+    }, []);
 
     const changeTheme = () => {
+        const newTheme = themeState === "light" ? "dark" : "light";
+        setThemeState(newTheme);
+        window.localStorage.setItem("theme", newTheme);
+        console.log(newTheme);
+    };
 
-        if(themeState == "light"){
-            setThemeState("dark");
-            setStyleState(classList.dark);
-            window.localStorage.setItem("theme", "dark")
-        }else{
-            setThemeState("light");
-            setStyleState(classList.light);
-            window.localStorage.setItem("theme", "light")
-        };
-
-        console.log(themeState)
-    }
-
-    return(
-
-        <header >
-            <img src="" alt=""  />
-            <nav className={styleState.nav}>
-                <a href="">Crea Tu Cuenta</a>
-                <a href="">Ingresa</a>
-                <a href="">Todos Los Productos</a>
+    return (
+        <header className={themeState === "dark" ? "header-dark" : "header-light"}>
+            <img src="" alt="" />
+            <nav>
+                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Crea Tu Cuenta</a>
+                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Ingresa</a>
+                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="">Todos Los Productos</a>
                 <button onClick={changeTheme}>Cambiar Tema</button>
             </nav>
         </header>
-
-    )
-
+    );
 };
 
 export default DashboardHeader;

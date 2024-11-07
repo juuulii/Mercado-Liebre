@@ -2,7 +2,10 @@
 import {useState} from "react";
 
 //utils
-import handleChangeForm from "../../utils/helpers/handleChangeForm.js"
+import handleChangeForm from "../../utils/helpers/handleChangeForm.js";
+
+//api
+import Products from "../../api/products.api.js";
 
 const AddProductForm = () => {
 
@@ -11,15 +14,21 @@ const AddProductForm = () => {
         description:"",
         price:"",
         category:"",
-        image:""
+        imageURL:""
     }
 
     const [ formState, setFormState ] = useState(model);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async(event) => {
 
         event.preventDefault();
-        console.log(formState)
+
+        const id = await Products.create(formState);
+
+        console.log(`producto ${id} creado!`);
+
+        window.location.reload();
+        
     }
 
     return (
@@ -28,7 +37,7 @@ const AddProductForm = () => {
             <input type="text" placeholder="Description" value={formState.description} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "description") }} />
             <input type="number" placeholder="Price"  value={formState.price} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "price") }}/>
             <input type="text" placeholder="Category" value={formState.category} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "category") }} />
-            <input type="text" placeholder="Image URL" value={formState.image} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "image") }} />
+            <input type="text" placeholder="Image URL" value={formState.image} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "imageURL") }} />
 
             <button type="submit"> Cargar Producto </button>
         </form>

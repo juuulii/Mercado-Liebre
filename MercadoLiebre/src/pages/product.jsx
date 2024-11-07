@@ -1,5 +1,5 @@
 //react
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 //api
 import Products from "../api/products.api.js"
@@ -11,6 +11,9 @@ import Footer from "../components/footers/footer.jsx";
 //utils
 import env from "../utils/enviroment.js";
 
+//ctx
+import { ThemeContext } from "../hooks/theme.ctx.jsx";
+
 const ProductPage = () => {
 
     const [ productState, setProductState ] = useState(null);
@@ -21,6 +24,8 @@ const ProductPage = () => {
 
             //obtener el id desde el localstorage
             const idProduct = window.localStorage.getItem("product")
+
+            console.log(idProduct)
 
             if(!idProduct){
                 window.location.href = `${env.frontUrl}/dashboard`
@@ -36,11 +41,18 @@ const ProductPage = () => {
 
         getProduct();
 
-    },[])
+    },[]);
+
+    //ctx
+    const { themeState, setThemeState } = useContext(ThemeContext);
+
+    useEffect(() => {
+        const theme = window.localStorage.getItem("theme") ?? "light";
+        setThemeState(theme);
+    }, []);
 
     return(
         <>
-
        <DashboardHeader/>
         
         {
@@ -48,7 +60,7 @@ const ProductPage = () => {
             ? <h1>Cargando...</h1> 
             : <div>
                 <h1>{productState.title}</h1>
-                <img src={productState.image} />
+                <img src={productState.imageURL} />
                 <h3>{productState.price}</h3>
                 <p>{productState.description}</p>
             </div>

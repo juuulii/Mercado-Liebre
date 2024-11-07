@@ -5,26 +5,28 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/login.jsx";
 import DashboardPage from "./pages/dahsboard.jsx";
 import AdminPage from "./pages/admin.jsx";
-import ProductPage from "./pages/product.jsx"
+import ProductPage from "./pages/product.jsx";
 import About from "./pages/about.jsx";
 import SysAdmin from "./pages/sysAdmin.jsx"
+
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
-import  {ThemeProvider}  from "./hooks/theme.ctx.jsx"
+import {ThemeProvider}  from "./hooks/theme.ctx.jsx"
 
 import NotFound from "./components/notFound/NotFound";
 
 const App = () => {
+
   const router = createBrowserRouter([
     {
       element: <LoginPage />,
       path: "/",
     },
     {
-      element: <DashboardPage />, //client
+      element: <DashboardPage />,
       path: "/dashboard",
     },
     {
-      element: <AdminPage />, //admin
+      element: <AdminPage />,
       path: "/admin",
     },
     {

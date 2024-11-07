@@ -15,7 +15,7 @@ const ProductContainer = ({product}) => {
 
         <div onClick={setProductOnLS}>
 
-            <img src={product.image} alt={product.title} />
+            <img src={product.imageURL} alt={product.title} />
 
             <div>
                 <h3>{product.title}</h3>
