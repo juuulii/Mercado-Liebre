@@ -17,7 +17,20 @@ const About = () => {
             <DashboardHeader />
             <div className={themeState === "dark" ? "about-dark" : "about-light"}>
                 <h1>Sobre Nosotros</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quasi veritatis eligendi tempora ducimus numquam quibusdam explicabo unde repellat nam, tempore, consequuntur iure. Fuga iure numquam, praesentium eveniet modi omnis?</p>
+                <h2>Misión</h2>
+                <p> 
+                Nuestra misión es conectar compradores y vendedores en una plataforma segura, fácil y accesible, 
+                ofreciendo una amplia variedad de productos que satisfagan las necesidades de nuestra comunidad. 
+                Nos comprometemos a proporcionar una experiencia de compra y venta en línea excepcional, fomentando la confianza ,
+                la innovación y el crecimiento económico en nuestra región.
+                </p>
+                <h2>Visión</h2>
+                <p>
+                Ser el líder en el mercado de comercio electrónico en Argentina, reconocidos por nuestra excelencia en servicio, 
+                innovación y compromiso con la comunidad. Queremos ser el destino preferido para compradores y 
+                vendedores que buscan una experiencia de compra y venta segura, eficiente y satisfactoria, y 
+                ser un motor de crecimiento económico y oportunidades para los empresarios y emprendedores de la región.
+                </p>
             </div>
             <Footer />
         </>
