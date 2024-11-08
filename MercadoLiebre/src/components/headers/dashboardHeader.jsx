@@ -1,7 +1,7 @@
-import "../../styles/components/headers/dashboardHeader.css";
-
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../hooks/theme.ctx";
+import "../../styles/components/headers/dashboardHeader.css";
+import "../../styles/pages/footer.css"; 
 
 const DashboardHeader = () => {
     const { themeState, setThemeState } = useContext(ThemeContext);
@@ -20,10 +20,10 @@ const DashboardHeader = () => {
 
     return (
         <header className={themeState === "dark" ? "header-dark" : "header-light"}>
-            <img src="" alt="" />
+            <img className="header-image" src="/images/logo.png" alt="Logo" />
             <nav>
-                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="/dashboard">Ver Productos</a>
-                <a className={themeState === "dark" ? "header-a-dark" : "header-a-light"} href="/admin">Gestionar Productos</a>
+                <a className={`link ${themeState === "dark" ? "link-dark" : "link-light"}`} href="/dashboard">Ver Productos</a>
+                <a className={`link ${themeState === "dark" ? "link-dark" : "link-light"}`} href="/admin">Gestionar Productos</a>
                 <button onClick={changeTheme}>Cambiar Tema</button>
             </nav>
         </header>
@@ -31,3 +31,4 @@ const DashboardHeader = () => {
 };
 
 export default DashboardHeader;
+
