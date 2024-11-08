@@ -1,6 +1,23 @@
-body {
-  margin: 0;
-  padding: 0;
+html, body {
+    height: 100%; 
+    margin: 0;
+    overflow: hidden;
 }
+
+.page-container {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.content {
+    flex-grow: 1; 
+}
+
+body, .page-container {
+    margin: 0;
+    padding: 0;
+}
+
 
 

@@ -1,0 +1,43 @@
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.25s;
+}
+
+/* Tema claro */
+.footer-light {
+    background-color: white;
+    color: black;
+}
+
+.link-light {
+    color: black;
+}
+
+/* Tema oscuro */
+.footer-dark {
+    background-color: #333;
+    color: white;
+}
+
+.link-dark {
+    color: white;
+}
+
+/* Hover para ambos temas */
+.link-light:hover,
+.link-dark:hover {
+    color: gray;
+}
+
+footer {
+    background-color: #333;
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
