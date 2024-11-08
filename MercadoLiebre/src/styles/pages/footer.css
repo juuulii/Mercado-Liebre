@@ -31,13 +31,17 @@
 /* Hover para ambos temas */
 .link-light:hover,
 .link-dark:hover {
-    color: gray;
+    color: rgb(7, 47, 107);
 }
 
 footer {
     background-color: #333;
     color: white; 
-    padding: 10px 20px; 
-    text-align: center; 
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
 }
