@@ -7,6 +7,10 @@ import handleChangeForm from "../../utils/helpers/handleChangeForm.js";
 //api
 import Products from "../../api/products.api.js";
 
+//styles
+import "../../styles/pages/AddProductForm.css";
+
+
 const AddProductForm = () => {
 
     const model = {

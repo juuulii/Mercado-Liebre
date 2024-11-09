@@ -4,6 +4,10 @@ import AddProductForm from "../components/forms/AddProductForm.jsx";
 
 import { useEffect, useState } from "react";
 
+//styles
+import "../styles/components/buttons/DeleteButton.css";
+import "../styles/components/buttons/UpdateButton.css"; 
+
 //api
 import Products from "../api/products.api.js"
 import env from "../utils/enviroment.js";
@@ -60,8 +64,8 @@ const AdminPage = () => {
                         return <div key={index}> 
                         <img style={{"width":"50px", "height":"50px", "margin":"10px"}} src={element.imageURL} alt="" />
                         {element.title} - {element.price} 
-                        <button style={{"margin":"20px"}} onClick={()=>{ deleteProduct(element.id) }}> Eliminar </button> 
-                        <button onClick={()=>{ redirectToUpdate(element.id) }}> Actualizar </button>
+                        <button className="deleteButton" onClick={()=>{ deleteProduct(element.id) }}> Eliminar </button> 
+                        <button className="updateButton" onClick={()=>{ redirectToUpdate(element.id) }}> Actualizar </button>
                         </div>
                     })
                 }
