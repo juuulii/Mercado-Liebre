@@ -13,8 +13,13 @@ const ProductContainer = ({ product }) => {
     <div className="product-container" onClick={setProductOnLS}>
       <img src={product.imageURL} alt={product.title} />
       <div className="product-info">
-        <h3>{product.title}</h3>
+        <h2>{product.title}</h2>
         <span>{product.price}</span>
+        <br></br>
+        <span>{product.description}</span>
+        <br></br>
+        <span>{product.category}</span>
+
       </div>
     </div>
   );
