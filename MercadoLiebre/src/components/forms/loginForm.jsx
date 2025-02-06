@@ -67,6 +67,7 @@ const LoginForm = () => {
         />
 
         <LargeButton text={"Submit"} action={handleSendData} />
+        <a href="/register"> Registrate en Mercado Liebre </a>
       </form>
     </div>
   );
