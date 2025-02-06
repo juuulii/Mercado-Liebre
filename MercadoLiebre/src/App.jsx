@@ -9,6 +9,7 @@ import ProductPage from "./pages/product.jsx";
 import About from "./pages/about.jsx";
 import UpdateProductPage from "./pages/updateProduct.jsx"
 import RegisterPage from "./pages/register.jsx";
+import CartPage from "./pages/cart.jsx";
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
 import {ThemeProvider}  from "./hooks/theme.ctx.jsx"
 
@@ -40,6 +41,10 @@ const App = () => {
     {
       element: <ProductPage />,
       path:"/product"
+    },
+    {
+      element: <CartPage />,
+      path:"/cart"
     },
     {
       element: <About />,
