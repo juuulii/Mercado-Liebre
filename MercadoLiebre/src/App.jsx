@@ -8,7 +8,7 @@ import AdminPage from "./pages/admin.jsx";
 import ProductPage from "./pages/product.jsx";
 import About from "./pages/about.jsx";
 import UpdateProductPage from "./pages/updateProduct.jsx"
-
+import RegisterPage from "./pages/register.jsx";
 // import { AuthContextProvider } from "./components/Services/AuthContex.jsx";
 import {ThemeProvider}  from "./hooks/theme.ctx.jsx"
 
@@ -20,6 +20,10 @@ const App = () => {
     {
       element: <LoginPage />,
       path: "/",
+    },
+    {
+      element: <RegisterPage />,
+      path: "/register",
     },
     {
       element: <DashboardPage />,
