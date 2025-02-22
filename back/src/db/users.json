@@ -1,16 +1,24 @@
 [
+  
   {
-    "username": "admin",
-    "email": "admin@gmail.com",
-    "password": "$2b$10$6HjasJeGs.Hrj7BTK8zwi.aFz9JI5JrPqGqBUZFhzV7T5fxOFF6bq",
-    "role": "3",
-    "id": "3682f59d-b258-49f0-bae8-4d2cb45591d6"
+    "username": "eze",
+    "email": "eze@gmail.com",
+    "password": "$2b$10$EeGfau9UbEXev1uYZ7/v3OHL62t4IjnxX3TD/6wBVetFPY9RBUj.G",
+    "role": "1",
+    "id": "ebf900bb-3a94-4a2e-b42a-124f18228d7c"
   },
   {
-    "username": "user",
-    "email": "user@gmail.com",
-    "password": "$2b$10$uC2Ca7ROCUy5rJZR35aR6uDalT5fNWDFWyeu/mlXvjs9YVhWrMlJ.",
+    "username": "sebas",
+    "email": "sebas@gmail.com",
+    "password": "$2b$10$EFES.C1qjADH9NvO7/TNUeGua0JsXLwOgrNsbnLFD72SHWYcbHOq6",
+    "role": "3",
+    "id": "a61344bc-4fc9-4516-82fa-c402f901d233"
+  },
+  {
+    "username": "oscar",
+    "email": "oscar@gmail.com",
+    "password": "$2b$10$zj2pt5WlY.e9X1Gc13JZbeKrusMVKvuMPe580jLO3tVJc6KC91HTu",
     "role": "1",
-    "id": "20b810fd-ad62-4ea3-84fb-44441f98df86"
+    "id": "39874edc-4ca1-45c9-8e72-c03cc22f4c28"
   }
 ]
