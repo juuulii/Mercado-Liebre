@@ -1,0 +1,41 @@
+.admin-container-products {
+    align-items: center;
+    width: 100%;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1330px;
+    margin-top: 20px;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #95a581;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 100%;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 10px;
+}

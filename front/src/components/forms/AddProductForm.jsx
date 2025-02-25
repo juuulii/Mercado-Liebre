@@ -38,6 +38,7 @@ const AddProductForm = () => {
     return (
         
         <form onSubmit={handleSubmit} >
+
             <input type="text" placeholder="Title" value={formState.title} onChange={ (event)=>{ handleChangeForm(event, formState, setFormState,"title") } } />
             <input type="text" placeholder="Description" value={formState.description} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "description") }} />
             <input type="number" placeholder="Price"  value={formState.price} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "price") }}/>
@@ -45,6 +46,7 @@ const AddProductForm = () => {
             <input type="text" placeholder="Image URL" value={formState.image} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "imageURL") }} />
 
             <button type="submit"> Cargar Producto </button>
+            
         </form>
     )
 

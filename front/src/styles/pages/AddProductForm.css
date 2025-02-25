@@ -1,6 +1,31 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-bg, #fff);
+    box-shadow: var(--shadow, 0px 4px 6px rgba(0, 0, 0, 0.1));
+    border-radius: 8px;
+}
+
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    color: black;
+}
+
+form input:focus {
+    border-color: #F5BB00;
+    outline: none;
+}
 
 form button[type="submit"] {
-    padding: 10px 15px;
+    padding: 12px;
     background-color: #F5BB00;
     color: white;
     font-size: 16px;
@@ -17,3 +42,12 @@ form button[type="submit"]:hover {
 form button[type="submit"]:focus {
     outline: none;
 }
+
+.admin-container-products {
+    background-color: #334553;; /* Color de fondo */
+    /* background-image: url('/ruta/de/la/imagen.jpg'); */ /* Si quieres imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+

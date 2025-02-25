@@ -1,4 +1,3 @@
-
 .link {
     text-decoration: none;
     padding: 0.5rem 0.75rem;
@@ -10,7 +9,7 @@
 
 /* Tema claro */
 .footer-light {
-    background-color: white;
+    background-color: #95a581;
     color: black;
 }
 
@@ -41,7 +40,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     width: 100%;
 }

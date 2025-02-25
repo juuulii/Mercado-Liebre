@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 
 //styles
 import "../styles/components/buttons/DeleteButton.css";
-import "../styles/components/buttons/UpdateButton.css"; 
+import "../styles/components/buttons/UpdateButton.css";
+import "../styles/pages/admin.css"
 
 //api
 import Products from "../api/products.api.js"
@@ -59,27 +60,40 @@ const AdminPage = () => {
     
     },[]);
 
-    return(
-
+    return (
         <div className="admin-container-products">
-
-            <DashboardHeader></DashboardHeader>
-            <AddProductForm></AddProductForm>
-                {
-                    productsState.length == 0
-                    ? <h1>Cargando Productos...</h1>
-                    : productsState.map((element, index)=>{
-                        return <div key={index}> 
-                        <img style={{"width":"50px", "height":"50px", "margin":"10px"}} src={element.imageURL} alt="" />
-                        {element.title} - {element.price} 
-                        <button className="deleteButton" onClick={()=>{ deleteProduct(element.id) }}> Eliminar </button> 
-                        <button className="updateButton" onClick={()=>{ redirectToUpdate(element.id) }}> Actualizar </button>
-                        </div>
-                    })
-                }
+            <DashboardHeader />
+            <AddProductForm />
             
+            <div className="products-container">
+                {productsState.length === 0 ? (
+                    <h1>Cargando Productos...</h1>
+                ) : (
+                    productsState.map((element, index) => (
+                        <div className="product-row" key={index}>
+                            <img className="product-image" src={element.imageURL} alt={element.title} />
+                            <div className="product-info">
+                                <h3>{element.title}</h3>
+                                <p>${element.price}</p>
+                            </div>
+                            <div className="product-buttons">
+                                <button className="deleteButton" onClick={() => deleteProduct(element.id)}>
+                                    Eliminar
+                                </button>
+                                <button className="updateButton" onClick={() => redirectToUpdate(element.id)}>
+                                    Actualizar
+                                </button>
+                            </div>
+                        </div>
+                    ))
+                )}
+            </div>
         </div>
-    )
+    );
+    
+
+    
+    
 
 };
 

@@ -52,7 +52,7 @@ const LoginForm = () => {
   return (
     <div className="login">
       <form>
-        <h1>LOG IN</h1>
+        <h1>Iniciar Sesión</h1>
         <input
           type="text"
           placeholder="Email"
@@ -66,7 +66,7 @@ const LoginForm = () => {
           onChange={handlePasswordState}
         />
 
-        <LargeButton text={"Submit"} action={handleSendData} />
+        <LargeButton text={"Aceptar"} action={handleSendData} />
 
         <a href="/register"> Registrate en Mercado Liebre </a>
 
