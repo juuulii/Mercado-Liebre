@@ -63,7 +63,7 @@ const App = () => {
     }
   ]);
   return (
-    <div className="container">
+    <div>
       <ThemeProvider>
         <RouterProvider router={router} />
       </ThemeProvider>

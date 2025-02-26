@@ -46,7 +46,7 @@ const DashboardPage = () => {
     return (
         <>
             <DashboardHeader />
-            <ProductsSlider />
+            {/*<ProductsSlider />*/}
             <div className="dashboardPage_productsContainer">
                 {
                     Array.isArray(productsState) && productsState.length > 0

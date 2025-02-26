@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import DashboardHeader from "../components/headers/dashboardHeader";
 
+import "../styles/pages/cart.css"
+
+
 const CartPage = () => {
 
     const [cartState, setCartState] = useState([]);
@@ -57,40 +60,39 @@ const CartPage = () => {
 
 
     
-    return(
-        <div>
-        <DashboardHeader />
-        <div>
-            <h1>Carrito</h1>
+    return (
+        <div className="cart-container">
+            <DashboardHeader />
+            <div className="cart-content">
+                <h1>🛒 Tu Carrito</h1>
 
-            <div>
-                {
-                    cartState.length == 0
-                    ? <h3> Carrito Vacio </h3>
-                    : cartState.map((element, index)=>{
-
-                        return (
-                            <div>
-                                <img style={{
-                                    width:"50px",
-                                    height:"auto"
-                                }} src={element.imageURL} alt={element.title} />
-                                <h3 key={index}> {element.title} - {element.price} </h3>
-                                <h2>Cantidad: {element.quantity}</h2>
+                {cartState.length === 0 ? (
+                    <h3 className="empty-cart">Carrito Vacío</h3>
+                ) : (
+                    <div className="cart-items">
+                        {cartState.map((element, index) => (
+                            <div key={index} className="cart-item">
+                                <img src={element.imageURL} alt={element.title} />
+                                <div className="item-details">
+                                    <h3>{element.title}</h3>
+                                    <p>Precio: <strong>${element.price}</strong></p>
+                                    <p>Cantidad: {element.quantity}</p>
+                                </div>
                             </div>
+                        ))}
+                    </div>
+                )}
 
-                        )
-
-                    })
-                }
-                <a href="">Agregar Mas Productos</a> <br />
-                <button onClick={resetCart}>Reiniciar Carrito</button> <br />
-                <button onClick={buyCart}>Comprar</button>
+                <div className="cart-actions">
+                    <a href="/dashboard" className="add-more">← Seguir Comprando</a>
+                    <div className="buttons">
+                        <button onClick={resetCart} className="reset-btn">Vaciar Carrito</button>
+                        <button onClick={buyCart} className="buy-btn">Comprar</button>
+                    </div>
+                </div>
             </div>
-
         </div>
-        </div>
-    )
+    );
 
 };
 

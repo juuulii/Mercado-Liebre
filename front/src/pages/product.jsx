@@ -14,6 +14,9 @@ import env from "../utils/enviroment.js";
 //ctx
 import { ThemeContext } from "../hooks/theme.ctx.jsx";
 
+//styles
+import "../styles/pages/productView.css"
+
 const ProductPage = () => {
 
     const addProductToCart = () => {
@@ -94,27 +97,27 @@ const ProductPage = () => {
         setThemeState(theme);
     }, []);
 
-    return(
+    return (
         <>
-       <DashboardHeader/>
-        
-        {
-            !productState 
-            ? <h1>Cargando...</h1> 
-            : <div>
-                <h1>{productState.title}</h1>
-                <img src={productState.imageURL} />
-                <h3>{productState.price}</h3>
-                <p>{productState.description}</p>
-                <button onClick={addProductToCart}>Agregar Al Carrito</button>
-               
+            <DashboardHeader />
+            <div className="product-view-container">
+                {!productState ? (
+                    <h1>Cargando...</h1>
+                ) : (
+                    <div className="product-view-card">
+                        <img src={productState.imageURL} alt={productState.title} />
+                        <h1 className="product-view-title">{productState.title}</h1>
+                        <h3 className="product-view-price">${productState.price}</h3>
+                        <p className="product-view-description">{productState.description}</p>
+                        <button className="product-view-button" onClick={addProductToCart}>
+                            🛒 Agregar Al Carrito
+                        </button>
+                    </div>
+                )}
             </div>
-        }
-
-        <Footer/>
+            <Footer />
         </>
-
-    )
+    );
 
 };
 

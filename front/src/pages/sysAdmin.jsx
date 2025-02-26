@@ -5,6 +5,10 @@ import UserForm from "../components/forms/userForm";
 import { useEffect } from "react";
 import handleRole from "../utils/helpers/handleRole";
 
+//styles
+
+import "../styles/main.css";
+
 const SysAdmin = () => {
 
     useEffect(()=>{
@@ -12,12 +16,12 @@ const SysAdmin = () => {
     },[])
     
     return(
-        <>
-        <DashboardHeader></DashboardHeader>
-        <UserForm></UserForm>
-        <Footer></Footer>
-        </>
-    )
+        <div className="sysAdmin-container">
+            <DashboardHeader />
+            <UserForm />
+            <Footer />
+        </div>
+    );
 
 };
 

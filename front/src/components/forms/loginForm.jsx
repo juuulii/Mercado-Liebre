@@ -61,7 +61,7 @@ const LoginForm = () => {
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Contraseña"
           value={passwordState}
           onChange={handlePasswordState}
         />

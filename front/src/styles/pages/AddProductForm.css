@@ -1,4 +1,4 @@
-form {
+.form-add {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -45,7 +45,6 @@ form button[type="submit"]:focus {
 
 .admin-container-products {
     background-color: #334553;; /* Color de fondo */
-    /* background-image: url('/ruta/de/la/imagen.jpg'); */ /* Si quieres imagen */
     background-size: cover;
     background-position: center;
 }

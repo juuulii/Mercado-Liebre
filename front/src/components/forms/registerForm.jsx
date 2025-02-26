@@ -60,12 +60,12 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="login">
+    <div className="register">
       <form>
-        <h1>REGISTER</h1>
+        <h1>Registrate</h1>
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Usuario"
           value={usernameState}
           onChange={handleUsernameState}
         />
@@ -77,18 +77,18 @@ const RegisterForm = () => {
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Contraseña"
           value={passwordState}
           onChange={handlePasswordState}
         />
         <input
           type="password"
-          placeholder="Confirm Password"
+          placeholder="Confirma contraseña"
           value={confirmPasswordState}
           onChange={handleConfirmPasswordState}
         />
 
-        <LargeButton text={"Submit"} action={handleSendData} />
+        <LargeButton text={"Aceptar"} action={handleSendData} />
       </form>
     </div>
   );

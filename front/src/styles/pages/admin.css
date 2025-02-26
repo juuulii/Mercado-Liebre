@@ -1,6 +1,8 @@
 .admin-container-products {
     align-items: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .products-container {
@@ -8,7 +10,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 1330px;
+    max-width: 800px;
     margin-top: 20px;
 }
 

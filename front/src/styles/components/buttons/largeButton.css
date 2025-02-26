@@ -11,6 +11,19 @@
 
 }
 
+.register {
+    border: 1px solid black;
+    width: 400px;
+    height: 600px;
+    color: white;
+    /*le falta alguna img de fondo*/
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+
 .largeButton_button{
     margin: 10px 0px;
     color: rgb(0, 0, 0);

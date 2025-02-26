@@ -11,6 +11,9 @@ import { useEffect, useState } from "react";
 import ProductContainer from "../containers/productContainer.jsx";
 import env from "../../utils/enviroment.js";
 
+//styles
+import "../../styles/pages/AddProductForm.css"
+
 
 const UpdateProductForm = () => {
 
@@ -65,12 +68,12 @@ const UpdateProductForm = () => {
         {
             formState.id == "" 
             ? <h1>Cargando...</h1> 
-            :<form onSubmit={handleSubmit} >
-            <input type="text" placeholder="Title" value={formState.title} onChange={ (event)=>{ handleChangeForm(event, formState, setFormState,"title") } } />
-            <input type="text" placeholder="Description" value={formState.description} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "description") }} />
-            <input type="number" placeholder="Price"  value={formState.price} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "price") }}/>
-            <input type="text" placeholder="Category" value={formState.category} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "category") }} />
-            <input type="text" placeholder="Image URL" value={formState.imageURL} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "imageURL") }} />
+            :<form className="form-add" onSubmit={handleSubmit} >
+            <input type="text" placeholder="Título" value={formState.title} onChange={ (event)=>{ handleChangeForm(event, formState, setFormState,"title") } } />
+            <input type="text" placeholder="Descripción" value={formState.description} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "description") }} />
+            <input type="number" placeholder="Precio"  value={formState.price} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "price") }}/>
+            <input type="text" placeholder="Categoría" value={formState.category} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "category") }} />
+            <input type="text" placeholder="Imagen URL" value={formState.imageURL} onChange={(event)=>{ handleChangeForm(event, formState, setFormState, "imageURL") }} />
 
             <button type="submit"> Actualizar Producto </button> <br />
 

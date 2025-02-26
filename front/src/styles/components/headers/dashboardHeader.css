@@ -68,4 +68,9 @@ header {
     gap: 15px;
 }
 
+header {
+    flex-shrink: 0; /* Evita que se expanda en flexbox */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
 
