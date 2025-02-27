@@ -1,1 +1,26 @@
-[{"id":"fca1cafd-c6cf-4fac-8ca1-18a98c066418","title":"PS1","description":"Es de Sony","price":"600000","category":"Gaming","imageURL":"https://www.shutterstock.com/image-photo/london-england-07052018-original-sony-260nw-1584733528.jpg"},{"id":"d4e60a9d-d304-4881-bf21-0ebe4eea5e21","title":"coca","description":"coca","price":"2000","category":"bebida","imageURL":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/15-09-26-RalfR-WLC-0098_-_Coca-Cola_glass_bottle_%28Germany%29.jpg/640px-15-09-26-RalfR-WLC-0098_-_Coca-Cola_glass_bottle_%28Germany%29.jpg"},{"id":"42cd9b29-83bd-475e-80fa-ded8b2a14276","title":"re","description":"","price":"","category":"","imageURL":""},{"id":"0d10c50b-7fab-4747-b716-9b079f93a47d","title":"qe","description":"","price":"","category":"","imageURL":""}]
+[
+  {
+    "id": "fca1cafd-c6cf-4fac-8ca1-18a98c066418",
+    "title": "PS1",
+    "description": "Es de Sony",
+    "price": "600000",
+    "category": "Gaming",
+    "imageURL": "https://www.shutterstock.com/image-photo/london-england-07052018-original-sony-260nw-1584733528.jpg"
+  },
+  {
+    "id": "d4e60a9d-d304-4881-bf21-0ebe4eea5e21",
+    "title": "coca",
+    "description": "coca",
+    "price": "2000",
+    "category": "bebida",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/15-09-26-RalfR-WLC-0098_-_Coca-Cola_glass_bottle_%28Germany%29.jpg/640px-15-09-26-RalfR-WLC-0098_-_Coca-Cola_glass_bottle_%28Germany%29.jpg"
+  },
+  {
+    "id": "c825ad72-f56e-4b0c-9099-95513e7a12fb",
+    "title": "silla",
+    "description": "suave",
+    "price": "10000",
+    "category": "mueble",
+    "imageURL": "data:image/jpeg;base64,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"
+  }
+]

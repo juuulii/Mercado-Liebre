@@ -68,24 +68,28 @@ const RegisterForm = () => {
           placeholder="Usuario"
           value={usernameState}
           onChange={handleUsernameState}
+          required={true}
         />
         <input
           type="text"
           placeholder="Email"
           value={emailState}
           onChange={handleEmailState}
+          required={true}
         />
         <input
           type="password"
           placeholder="Contraseña"
           value={passwordState}
           onChange={handlePasswordState}
+          required={true}
         />
         <input
           type="password"
           placeholder="Confirma contraseña"
           value={confirmPasswordState}
           onChange={handleConfirmPasswordState}
+          required={true}
         />
 
         <LargeButton text={"Aceptar"} action={handleSendData} />
