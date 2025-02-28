@@ -47,7 +47,7 @@ const ProductPage = () => {
       if (productIndex !== -1) {
         deserelealizedCart[productIndex] = {
           ...productState,
-          quantity: deserelealizedCart[productIndex].quantity || 0,
+          quantity: (deserelealizedCart[productIndex].quantity || 0) + 1,
         };
       } else {
         deserelealizedCart.push({ ...productState, quantity: 1 });
